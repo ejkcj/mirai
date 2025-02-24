@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(255, 235, 235);
+}
+
+nav {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  width: 60px;
+  background-color: black;
+  border-radius: 100%;
+  padding: 5px 6px;
+}
+
+.s_con {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.s_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.s_title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(13, 33, 63);
+  margin-bottom: 1rem;
+}
+
+.s_sub {
+  font-size: 1rem;
+  color: rgb(13, 33, 63);
+  max-width: calc(1200px / 2);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 132, 250);
+  border-radius: 2rem;
+}
+
+.btn:hover {
+  background-color: rgb(47, 115, 217);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.link {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  font-size: 25px;
+  padding: 0 1rem;
+  color: rgb(13, 33, 63);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: rgb(46, 4, 22);
+  font-size: 2rem;
+  text-decoration: underline rgb(116, 112, 116);
+  display: block;
+  transition: 0.3s;
+}
+
+header {
+  background-color: rgb(207, 223, 248);
+}
+
+.h_con {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.h_img {
+  position: relative;
+}
+
+.h_img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5rem solid white;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.h_img img:nth-child(1) {
+  max-width: 350px;
+  transform: translate(-75%, -50%);
+}
+
+.h_img img:nth-child(2) {
+  max-width: 250px;
+  transform: translate(0%, -25%);
+}
+
+.h_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h_content > div {
+  max-width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+.h_content {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(54, 132, 250);
+}
+
+.h_content h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 800;
+  color: rgb(13, 33, 63);
+}
+
+.h_content .abtn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.memories {
+  position: relative;
+}
+
+.memories img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.memories span {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.memories span i {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: red;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story > span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(13, 33, 63);
+}
+
+.destination__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.destination__card {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+.destination__card img {
+  border-radius: 16px;
+  height: 400px;
+}
+
+.destination__details {
+  position: absolute;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.destination__card:hover .destination__details {
+  bottom: 1rem;
+}
+
+.destination__title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.destination__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.booking__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgb(118, 114, 104);
+}
+
+.book__now {
+  padding: 0.5rem 1.5rem;
+  color: rgb(54, 132, 250);
+  outline: none;
+  border: 1px solid rgb(54, 132, 250);
+  border-radius: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book__now:hover {
+  color: white;
+  background-color: rgb(54, 132, 250);
+}
+
+.gal_c {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.img_gal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gal_col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.gal_col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gal_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gal_content > div {
+  max-width: 400px;
+}
+
+.gal_content .s_sub {
+  margin-bottom: 2rem;
+}
+
+.footer {
+  background-color: rgb(125, 113, 231);
+}
+
+.col a {
+  color: aliceblue;
+}
+
+.col a:hover {
+  color: rgb(2, 25, 59);
+  transition: 0.3s;
+}
+
+.end {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+  color: rgb(250, 252, 255);
+}
+
+.col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.col h3 span {
+  color: rgb(54, 132, 250);
+}
+
+.col p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.col p:hover {
+  color: rgb(2, 25, 59);
+}
+
+.btn a {
+  color: white;
+}
+
+.col p span {
+  font-weight: 600;
+}
+
+.col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
